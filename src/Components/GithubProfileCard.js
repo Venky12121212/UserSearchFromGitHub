@@ -14,7 +14,7 @@ class GithubProfileCard extends React.Component {
                     <img src={avatar_url} className="img-fluid"/>
                     <div className="card-body">
                         <h4>{name}</h4>
-                        <p title={bio}>{((bio == "undefined") || (bio == "null") || (bio =="")) ? null : ((bio).length > 40 ?  bio.substring(0,40) + "..." : bio) }</p>
+                        <p title={bio}>{((bio != "null") && (bio != null)) ? ((bio).length > 40 ?  bio.substring(0,40) + "..." : bio) : null }</p>
                         <a href={html_url} target="_blank" className="btn btn-sm btn-success">Profile</a>
                     </div>
                 </div>
